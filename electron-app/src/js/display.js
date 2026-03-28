@@ -325,12 +325,11 @@ function buildStatsSlide(ac) {
     { icon: '\uD83D\uDC68\u200D\uD83C\uDF93', number: 1200, suffix: '+', label: 'STUDENTS',           color: 'var(--cyan)',     border: 'rgba(0,229,255,.55)' },
     { icon: '\uD83C\uDF0D',                   number: 50,   suffix: '+', label: 'NATIONALITIES',       color: 'var(--neon-pink)',border: 'rgba(255,46,147,.55)' },
     { icon: '\uD83C\uDFC6',                   number: 6,    suffix: '+', label: 'YEARS',               color: 'var(--gold)',     border: 'rgba(255,214,0,.55)' },
-    { icon: '\uD83D\uDC69\u200D\uD83C\uDFEB', number: 72,   suffix: '+', label: 'TEACHERS',            color: 'var(--emerald)',  border: 'rgba(0,230,118,.55)' },
   ];
 
   let html = '<div class="stats-slide ' + ac + '">' +
     '<div class="slide-school-banner">BY THE NUMBERS</div>' +
-    '<div class="stats-grid stats-grid-4">';
+    '<div class="stats-grid stats-grid-3">';
   stats.forEach(function(s, i) {
     html += '<div class="stat-card holo-shimmer" style="color:' + s.color + ';border-color:' + s.border + ';animation-delay:' + (i * 0.12) + 's">' +
       '<div class="stat-spotlight"></div>' +
@@ -399,7 +398,7 @@ function buildAdmissionsSlide(ac) {
       '<div class="admissions-badge" style="background:rgba(255,214,0,.15);border:3px solid rgba(255,214,0,.5);color:var(--gold)">' +
         '\uD83C\uDF93 ADMISSIONS 2026\u201327' +
       '</div>' +
-      '<div class="admissions-headline" style="font-size:5vw;margin-bottom:18px">' +
+      '<div class="admissions-headline" style="font-size:6vw;margin-bottom:24px">' +
         'Join Our Global Family' +
       '</div>' +
       '<div class="admissions-date-box" style="background:rgba(29,233,182,.15);border:3px solid rgba(29,233,182,.5)">' +
@@ -448,9 +447,9 @@ function buildNextEventSlide(ac) {
   return '<div class="next-event-slide ' + ac + '">' +
     '<div class="slide-school-banner">NEXT EVENT</div>' +
     '<div class="glass-card next-event-card holo-shimmer" style="border-color:rgba(29,233,182,.5);box-shadow:0 0 50px rgba(29,233,182,.25)">' +
-      '<div class="fact-label text-teal" style="letter-spacing:6px;margin-bottom:14px;font-size:2.8vw">COUNTDOWN</div>' +
-      '<div class="next-event-title" style="font-size:5vw;margin-bottom:14px">' + esc(ev.title) + '</div>' +
-      '<div style="font-family:var(--f-clock);font-size:2.5vw;color:var(--white70);margin-bottom:28px">\uD83D\uDCC5 ' + formatShortDate(ev.event_date) + '</div>' +
+      '<div class="fact-label text-teal" style="letter-spacing:6px;margin-bottom:14px;font-size:3.5vw">COUNTDOWN</div>' +
+      '<div class="next-event-title" style="font-size:6vw;margin-bottom:14px">' + esc(ev.title) + '</div>' +
+      '<div style="font-family:var(--f-clock);font-size:3vw;color:var(--white70);margin-bottom:28px">\uD83D\uDCC5 ' + formatShortDate(ev.event_date) + '</div>' +
       '<div class="countdown-row">' +
         '<div class="countdown-block"><div class="countdown-num" style="color:' + accentC + '">' + cd.d + '</div><div class="countdown-label">DAYS</div></div>' +
         '<div style="font-family:var(--f-clock);font-size:4vw;color:var(--white30);align-self:center">:</div>' +
@@ -467,7 +466,7 @@ function buildNextEventSlide(ac) {
 //   UPCOMING EVENTS LIST
 // ══════════════════════════════════════════════════
 function buildUpcomingSlide(ac) {
-  const evs = state.upcomingEvents.slice(0, 4);
+  const evs = state.upcomingEvents.slice(0, 3);
   let html = '<div class="upcoming-slide ' + ac + '">' +
     '<div class="slide-school-banner">UPCOMING EVENTS</div>' +
     '<div class="glass-card upcoming-list-card holo-shimmer" style="border-color:rgba(255,46,147,.4);box-shadow:0 0 40px rgba(255,46,147,.2);width:100%">';
