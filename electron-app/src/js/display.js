@@ -268,11 +268,6 @@ function buildWelcomeSlide(ac) {
     '<div class="welcome-school">' + esc(SCHOOL_NAME.toUpperCase()) + '</div>' +
     '<div class="welcome-tagline">\u201C' + esc(SCHOOL_MOTTO) + '\u201D</div>' +
     '<div class="welcome-established">EST. 2020 \u2022 LUBUMBASHI, DRC</div>' +
-    '<div class="welcome-badges">' +
-      '<div class="welcome-badge" style="color:var(--gold);border-color:var(--gold);background:rgba(255,214,0,.15)">\uD83C\uDFC5 COBIS</div>' +
-      '<div class="welcome-badge" style="color:var(--cyan);border-color:var(--cyan);background:rgba(0,229,255,.15)">\uD83C\uDF93 IB WORLD</div>' +
-      '<div class="welcome-badge" style="color:var(--neon-pink);border-color:var(--neon-pink);background:rgba(255,46,147,.15)">\uD83E\uDD16 AI LAB</div>' +
-    '</div>' +
   '</div>';
 }
 
@@ -307,7 +302,7 @@ function buildClockSlide(ac) {
   const periodHtml = pi.label ? '<div class="period-badge" style="color:' + pi.color + ';border-color:' + pi.color + '55;background:' + pi.color + '14;margin-top:18px"><span class="period-icon">' + pi.icon + '</span><span>' + esc(pi.label) + '</span></div>' + progressBar : '';
 
   return '<div class="clock-slide ' + ac + '">' +
-    '<div class="glass-card clock-left" style="border-color:rgba(0,229,255,.4);box-shadow:0 0 50px rgba(0,229,255,.18)">' +
+    '<div class="clock-left">' +
       '<div class="clock-school-name">' + esc(SCHOOL_SHORT.toUpperCase()) + '</div>' +
       '<div class="clock-motto">' + esc(SCHOOL_MOTTO) + '</div>' +
       '<div class="clock-time-row" style="margin-top:16px"><div class="clock-hhmm">' + esc(hhmm) + '</div><div class="clock-ss">:' + esc(ss) + '</div></div>' +
@@ -372,8 +367,6 @@ function buildAchievementsSlide(ac) {
       headline: 'IB & British Curriculum' },
     { icon: '\uD83E\uDD16', color: 'rgba(0,229,255,.2)',   border: 'rgba(0,229,255,.5)',  glow: 'rgba(0,229,255,.2)',
       headline: 'First AI Lab in Africa' },
-    { icon: '\uD83C\uDFC6', color: 'rgba(0,230,118,.2)',   border: 'rgba(0,230,118,.5)',  glow: 'rgba(0,230,118,.2)',
-      headline: 'Best Results in Region' },
   ];
 
   let html = '<div class="achievements-slide ' + ac + '">' +
@@ -406,7 +399,7 @@ function buildAdmissionsSlide(ac) {
       '<div class="admissions-badge" style="background:rgba(255,214,0,.15);border:3px solid rgba(255,214,0,.5);color:var(--gold)">' +
         '\uD83C\uDF93 ADMISSIONS 2026\u201327' +
       '</div>' +
-      '<div class="admissions-headline" style="font-size:3.5vw;margin-bottom:18px">' +
+      '<div class="admissions-headline" style="font-size:5vw;margin-bottom:18px">' +
         'Join Our Global Family' +
       '</div>' +
       '<div class="admissions-date-box" style="background:rgba(29,233,182,.15);border:3px solid rgba(29,233,182,.5)">' +
@@ -427,12 +420,9 @@ function buildHighlightsSlide(ac) {
     { icon: '\uD83C\uDFDF\uFE0F', title: 'Auditorium' },
     { icon: '\uD83C\uDFCA',       title: 'Swimming Pool' },
     { icon: '\uD83D\uDD2C',       title: 'Science Labs' },
-    { icon: '\uD83D\uDCBB',       title: 'Computer & AI Labs' },
-    { icon: '\uD83D\uDCDA',       title: 'Library Hub' },
-    { icon: '\uD83C\uDF10',       title: 'Smart Campus' },
   ];
-  const colors  = ['rgba(0,229,255,.25)','rgba(108,99,255,.25)','rgba(0,230,118,.25)','rgba(255,214,0,.25)','rgba(179,136,255,.25)','rgba(255,138,101,.25)'];
-  const borders = ['rgba(0,229,255,.5)', 'rgba(108,99,255,.5)', 'rgba(0,230,118,.5)', 'rgba(255,214,0,.5)', 'rgba(179,136,255,.5)', 'rgba(255,138,101,.5)'];
+  const colors  = ['rgba(0,229,255,.25)','rgba(108,99,255,.25)','rgba(0,230,118,.25)'];
+  const borders = ['rgba(0,229,255,.5)', 'rgba(108,99,255,.5)', 'rgba(0,230,118,.5)'];
 
   let html = '<div class="highlights-slide ' + ac + '">' +
     '<div class="slide-school-banner">WORLD-CLASS INFRASTRUCTURE</div>' +
@@ -458,9 +448,9 @@ function buildNextEventSlide(ac) {
   return '<div class="next-event-slide ' + ac + '">' +
     '<div class="slide-school-banner">NEXT EVENT</div>' +
     '<div class="glass-card next-event-card holo-shimmer" style="border-color:rgba(29,233,182,.5);box-shadow:0 0 50px rgba(29,233,182,.25)">' +
-      '<div class="fact-label text-teal" style="letter-spacing:6px;margin-bottom:14px;font-size:1.8vw">COUNTDOWN</div>' +
-      '<div class="next-event-title" style="font-size:3.5vw;margin-bottom:14px">' + esc(ev.title) + '</div>' +
-      '<div style="font-family:var(--f-clock);font-size:1.8vw;color:var(--white70);margin-bottom:28px">\uD83D\uDCC5 ' + formatShortDate(ev.event_date) + '</div>' +
+      '<div class="fact-label text-teal" style="letter-spacing:6px;margin-bottom:14px;font-size:2.8vw">COUNTDOWN</div>' +
+      '<div class="next-event-title" style="font-size:5vw;margin-bottom:14px">' + esc(ev.title) + '</div>' +
+      '<div style="font-family:var(--f-clock);font-size:2.5vw;color:var(--white70);margin-bottom:28px">\uD83D\uDCC5 ' + formatShortDate(ev.event_date) + '</div>' +
       '<div class="countdown-row">' +
         '<div class="countdown-block"><div class="countdown-num" style="color:' + accentC + '">' + cd.d + '</div><div class="countdown-label">DAYS</div></div>' +
         '<div style="font-family:var(--f-clock);font-size:4vw;color:var(--white30);align-self:center">:</div>' +
@@ -477,7 +467,7 @@ function buildNextEventSlide(ac) {
 //   UPCOMING EVENTS LIST
 // ══════════════════════════════════════════════════
 function buildUpcomingSlide(ac) {
-  const evs = state.upcomingEvents.slice(0, 5);
+  const evs = state.upcomingEvents.slice(0, 4);
   let html = '<div class="upcoming-slide ' + ac + '">' +
     '<div class="slide-school-banner">UPCOMING EVENTS</div>' +
     '<div class="glass-card upcoming-list-card holo-shimmer" style="border-color:rgba(255,46,147,.4);box-shadow:0 0 40px rgba(255,46,147,.2);width:100%">';
@@ -508,8 +498,6 @@ function buildPrideSlide(ac) {
     { icon: '\uD83C\uDFAF', title: 'EXCELLENCE', color: 'var(--gold)',     border: 'rgba(255,214,0,.5)' },
     { icon: '\uD83C\uDF0D', title: 'DIVERSITY',  color: 'var(--cyan)',     border: 'rgba(0,229,255,.5)' },
     { icon: '\uD83D\uDCA1', title: 'INNOVATION', color: 'var(--neon-pink)',border: 'rgba(255,46,147,.5)' },
-    { icon: '\uD83E\uDD1D', title: 'INTEGRITY',  color: 'var(--emerald)',  border: 'rgba(0,230,118,.5)' },
-    { icon: '\uD83D\uDE80', title: 'AMBITION',   color: 'var(--lavender)', border: 'rgba(179,136,255,.5)' },
   ];
   let html = '<div class="pride-slide ' + ac + '">' +
     '<div class="pride-title">OUR CORE VALUES</div>' +
