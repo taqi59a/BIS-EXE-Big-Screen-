@@ -46,3 +46,5 @@ app.*.map.json
 electron-app/node_modules/
 electron-app/src/css/*.bak
 electron-app/src/js/*.bak
+electron-app/BISL-Display-Windows-Portable.zip
+electron-app/dist/
